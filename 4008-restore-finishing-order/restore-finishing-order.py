@@ -5,6 +5,9 @@ class Solution(object):
         :type friends: List[int]
         :rtype: List[int]
         """
-        s = set(friends)
-        return [i for i in order if i in s]
+        s = []
+        for i in order:
+            if i in friends:
+                s.append(i)
+        return s
         
